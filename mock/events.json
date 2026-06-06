@@ -1,96 +1,91 @@
 [
   {
-    "id": "evt_1780746001053_zev1drdf5",
+    "id": "evt_1780746694916_bkatjm8zb",
     "type": "campaign.started",
-    "campaignId": "camp_1780746001049",
-    "message": "Starting campaign generation workflow for \"PAKISTAN DAY\"",
+    "campaignId": "camp_1780746694913",
+    "message": "Starting campaign generation workflow for \"MARCH\"",
     "agentName": "OrchestratorAgent",
-    "timestamp": "2026-06-06T11:40:01.053Z"
+    "timestamp": "2026-06-06T11:51:34.916Z"
   },
   {
-    "id": "evt_1780746001056_t9spxwp33",
+    "id": "evt_1780746694917_crxlyx1d7",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Audience Agent Running...",
     "agentName": "AudienceAgent",
-    "timestamp": "2026-06-06T11:40:01.056Z"
+    "timestamp": "2026-06-06T11:51:34.917Z"
   },
   {
-    "id": "evt_1780746010180_1lujevvth",
+    "id": "evt_1780746696795_4i0tu8mik",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Audience matched: \"National Holiday Active Segment\" (59 users targetable)",
     "agentName": "AudienceAgent",
-    "timestamp": "2026-06-06T11:40:10.180Z",
+    "timestamp": "2026-06-06T11:51:36.795Z",
     "details": {
       "audienceName": "National Holiday Active Segment",
       "userCount": 59
     }
   },
   {
-    "id": "evt_1780746010181_rsiu3pb1x",
+    "id": "evt_1780746696796_11ocz52vx",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Strategy Agent Running...",
     "agentName": "StrategyAgent",
-    "timestamp": "2026-06-06T11:40:10.181Z"
+    "timestamp": "2026-06-06T11:51:36.796Z"
   },
   {
-    "id": "evt_1780746026260_xzawkgoem",
+    "id": "evt_1780746696797_wixoc8cio",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
-    "message": "Strategy formulated: \"Flash Sale\" (Multi-Channel)",
+    "campaignId": "camp_1780746694913",
+    "message": "Strategy \"Manual\" not found, using generic promotion",
     "agentName": "StrategyAgent",
-    "timestamp": "2026-06-06T11:40:26.260Z",
-    "details": {
-      "strategyName": "Flash Sale",
-      "channel": "Multi-Channel",
-      "reasoning": "Tech-savvy and younger cohorts respond highly to urgency cues, countdowns, and limited-run Flash Sales over social channels."
-    }
+    "timestamp": "2026-06-06T11:51:36.797Z"
   },
   {
-    "id": "evt_1780746026261_oe8f4wfu2",
+    "id": "evt_1780746696797_9cahhrd3h",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Template Agent Running...",
     "agentName": "TemplateAgent",
-    "timestamp": "2026-06-06T11:40:26.261Z"
+    "timestamp": "2026-06-06T11:51:36.797Z"
   },
   {
-    "id": "evt_1780746028735_lm6azfkqj",
+    "id": "evt_1780746698726_oquins19w",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Template copywriting generated: \"Pakistan Day Resolution Sale\"",
     "agentName": "TemplateAgent",
-    "timestamp": "2026-06-06T11:40:28.735Z",
+    "timestamp": "2026-06-06T11:51:38.726Z",
     "details": {
       "templateName": "Pakistan Day Resolution Sale",
       "subject": "🇵🇰 Celebrate Pakistan Day with {{discount}} OFF!"
     }
   },
   {
-    "id": "evt_1780746028736_kr2j7hkdw",
+    "id": "evt_1780746698726_2tzoi7zf4",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Simulating campaign launch and collecting customer activities...",
     "agentName": "System",
-    "timestamp": "2026-06-06T11:40:28.736Z"
+    "timestamp": "2026-06-06T11:51:38.726Z"
   },
   {
-    "id": "evt_1780746029959_0h8csng45",
+    "id": "evt_1780746699941_9slw7s80l",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Learning Agent Running...",
     "agentName": "LearningAgent",
-    "timestamp": "2026-06-06T11:40:29.959Z"
+    "timestamp": "2026-06-06T11:51:39.941Z"
   },
   {
-    "id": "evt_1780746036055_c9xwa1xck",
+    "id": "evt_1780746701312_ayhycr0r6",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Learning Recommendations generated.",
     "agentName": "LearningAgent",
-    "timestamp": "2026-06-06T11:40:36.055Z",
+    "timestamp": "2026-06-06T11:51:41.312Z",
     "details": {
       "recommendations": [
         "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
@@ -100,19 +95,19 @@
     }
   },
   {
-    "id": "evt_1780746036058_7v09k2l7b",
+    "id": "evt_1780746701315_srwjldnk1",
     "type": "campaign.created",
-    "campaignId": "camp_1780746001049",
-    "message": "Campaign \"PAKISTAN DAY\" created.",
+    "campaignId": "camp_1780746694913",
+    "message": "Campaign \"MARCH\" created.",
     "agentName": "System",
-    "timestamp": "2026-06-06T11:40:36.058Z"
+    "timestamp": "2026-06-06T11:51:41.315Z"
   },
   {
-    "id": "evt_1780746036059_tik4wtit2",
+    "id": "evt_1780746701317_md1e261w3",
     "type": "campaign.completed",
-    "campaignId": "camp_1780746001049",
+    "campaignId": "camp_1780746694913",
     "message": "Orchestration workflow completed successfully.",
     "agentName": "OrchestratorAgent",
-    "timestamp": "2026-06-06T11:40:36.059Z"
+    "timestamp": "2026-06-06T11:51:41.317Z"
   }
 ]

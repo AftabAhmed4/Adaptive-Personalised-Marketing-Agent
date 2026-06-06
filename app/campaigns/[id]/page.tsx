@@ -5,7 +5,7 @@ import {
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Legend
 } from 'recharts';
-import { Search, ArrowLeft, Users, Target, Mail, Radio, Brain, Bot, Activity, BarChart2 } from 'lucide-react';
+import { Search, ArrowLeft, Users, Target, Mail, Radio, Brain, Bot, Activity, BarChart2, Send, CheckCircle2 } from 'lucide-react';
 
 interface Campaign {
   id: string; name: string; type: string;
@@ -41,6 +41,17 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'overview' | 'activity' | 'recommendations'>('overview');
   const [showTemplate, setShowTemplate] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [toastVisible, setToastVisible] = useState(false);
+
+  const handleSendEmails = () => {
+    setIsSending(true);
+    setTimeout(() => {
+      setIsSending(false);
+      setToastVisible(true);
+      setTimeout(() => setToastVisible(false), 4000);
+    }, 1500);
+  };
 
   useEffect(() => {
     fetch(`/api/campaigns/${id}`)
@@ -99,8 +110,16 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
             <div className="topbar-subtitle">{campaign.type} · Created {new Date(campaign.createdAt).toLocaleDateString()}</div>
           </div>
         </div>
-        <div className="topbar-actions">
+        <div className="topbar-actions" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           <span className={`badge ${statusColor[campaign.status] || 'badge-gray'}`}>● {campaign.status}</span>
+          <button 
+            className="btn btn-primary flex items-center gap-2" 
+            onClick={handleSendEmails}
+            disabled={isSending}
+          >
+            {isSending ? <div className="spinner" style={{ width: 14, height: 14 }}></div> : <Send size={14} />}
+            {isSending ? 'Sending...' : 'Launch & Send Emails'}
+          </button>
         </div>
       </div>
 
@@ -285,6 +304,32 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
           </div>
         )}
       </div>
+
+      {/* Toast Notification */}
+      {toastVisible && (
+        <div className="fade-in-up" style={{
+          position: 'fixed',
+          bottom: 24,
+          right: 24,
+          background: 'var(--bg-card)',
+          border: '1px solid var(--border)',
+          borderRadius: 8,
+          padding: '16px 20px',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 12,
+          boxShadow: '0 8px 30px rgba(0,0,0,0.4)',
+          zIndex: 1000
+        }}>
+          <CheckCircle2 size={24} color="var(--brand-emerald)" />
+          <div>
+            <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)' }}>Emails Sent Successfully</div>
+            <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 2 }}>
+              Dispatched {campaign.metrics.sent.toLocaleString()} emails to the "{campaign.audienceName}" segment.
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
