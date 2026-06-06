@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Megaphone, Activity, TrendingUp, DollarSign, Bot, Inbox, Zap, ArrowRight } from 'lucide-react';
+import { Megaphone, Activity, TrendingUp, DollarSign, Bot, Inbox, Zap, ArrowRight, CheckCircle2, X } from 'lucide-react';
 import {
   LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip,
   ResponsiveContainer, CartesianGrid, Legend
@@ -57,12 +57,22 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 export default function DashboardPage() {
   const [campaigns, setCampaigns] = useState<Campaign[]>([]);
   const [loading, setLoading] = useState(true);
+  const [toast, setToast] = useState<string | null>(null);
 
   useEffect(() => {
     fetch('/api/campaigns')
       .then(r => r.json())
       .then(data => { setCampaigns(data); setLoading(false); })
       .catch(() => setLoading(false));
+  }, []);
+
+  useEffect(() => {
+    const created = sessionStorage.getItem('campaignCreated');
+    if (created) {
+      sessionStorage.removeItem('campaignCreated');
+      setToast(created);
+      setTimeout(() => setToast(null), 5000);
+    }
   }, []);
 
   const totalCampaigns = campaigns.length;
@@ -233,6 +243,34 @@ export default function DashboardPage() {
           </div>
         </div>
       </div>
+
+      {/* Campaign Created Toast */}
+      {toast && (
+        <div
+          className="fade-in-up"
+          style={{
+            position: 'fixed', bottom: 24, right: 24,
+            background: 'var(--bg-card)',
+            border: '1px solid var(--border)',
+            borderRadius: 12,
+            padding: '16px 20px',
+            display: 'flex', alignItems: 'center', gap: 12,
+            boxShadow: '0 8px 32px rgba(0,0,0,0.45)',
+            zIndex: 1000, minWidth: 300, maxWidth: 400
+          }}
+        >
+          <div style={{ width: 36, height: 36, borderRadius: 8, background: 'rgba(16,185,129,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+            <CheckCircle2 size={20} color="var(--brand-emerald)" />
+          </div>
+          <div style={{ flex: 1 }}>
+            <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)' }}>Campaign Created!</div>
+            <div style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>"<strong style={{ color: 'var(--text-secondary)' }}>{toast}</strong>" is live and running.</div>
+          </div>
+          <button onClick={() => setToast(null)} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', padding: 2 }}>
+            <X size={16} />
+          </button>
+        </div>
+      )}
     </div>
   );
 }

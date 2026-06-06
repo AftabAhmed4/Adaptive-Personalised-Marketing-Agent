@@ -1,5 +1,717 @@
 [
   {
+    "id": "camp_1780748633573",
+    "name": "API TEST RUN",
+    "type": "11.11 Sale",
+    "audienceName": "High-Spending Fashion Buyers",
+    "audienceFilter": {
+      "minPurchases": 5,
+      "cities": [
+        "Karachi",
+        "Lahore"
+      ],
+      "gender": "All"
+    },
+    "userCount": 53,
+    "strategyName": "Loyalty Rewards Program",
+    "templateName": "11.11 Sale Template",
+    "templateSubject": "🔥 Biggest Sale of the Year: {{offer}}!",
+    "templateBody": "Hi {{name}},\n\nGet ready for the mega shopping event of the year! We are offering a whopping {{discount}} on all your favorite categories.\n\nDon't wait. Items are selling out fast!\n\n👉 Click here: {{cta}}\n\nHappy Shopping!",
+    "ctr": 26.4,
+    "conversion": 13.2,
+    "status": "Completed",
+    "metrics": {
+      "sent": 53,
+      "opened": 45,
+      "clicked": 14,
+      "converted": 7,
+      "ctr": 26.4,
+      "conversionRate": 13.2
+    },
+    "activities": [
+      {
+        "email": "ayesha.khan@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "m.ali@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sanamalik@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "fahad.m@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sarah.q@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "salman.k@hotmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "nida.yasir@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "waseem.a@hotmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "kiran.naz@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "saba.qamar@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "jj@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "iqra.aziz@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "humayun.s@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sajal.aly@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sheheryar@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "urwa.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "farhan.s@hotmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "maya.ali@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ahsan.k@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "wahaj.ali@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "bilal.abbas@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ramsha.k@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "asim.azhar@hotmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "syra.y@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ahad.mir@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "zara.noor@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "asad.s@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "yasir.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mohib.mirza@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "amina.s@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "noman.ijaz@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": false
+      },
+      {
+        "email": "sania.saeed@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "faysal.q@yahoo.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "arij.f@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sami.khan@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mansha.p@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "jibran.n@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sonya.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sanam.s@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "babar.azam@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "saim.ayub@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "bismah.m@yahoo.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "fatima.sana@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "muneeba.a@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "nashra.s@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "anwer.a@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "boom.boom@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "kami@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "umar@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "adnan@yahoo.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "wahab.riaz@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "azhar.ali@outlook.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "asad.shafiq@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      }
+    ],
+    "recommendations": [
+      "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
+      "CTR is performing well. Maintain standard paragraph length and test personalizing the greeting style to build stronger user connection.",
+      "Conversion to clicks ratio is high. Consider expanding this target segment size in the next run, as the offer-market fit is highly optimized."
+    ],
+    "createdAt": "2026-06-06T12:23:58.607Z"
+  },
+  {
+    "id": "camp_1780748246833",
+    "name": "TST",
+    "type": "11.11 Sale",
+    "audienceName": "High-Spending Fashion Buyers",
+    "audienceFilter": {
+      "minPurchases": 5,
+      "cities": [
+        "Karachi",
+        "Lahore"
+      ],
+      "gender": "All"
+    },
+    "userCount": 53,
+    "strategyName": "Loyalty Rewards Program",
+    "templateName": "11.11 Sale Template",
+    "templateSubject": "🔥 Biggest Sale of the Year: {{offer}}!",
+    "templateBody": "Hi {{name}},\n\nGet ready for the mega shopping event of the year! We are offering a whopping {{discount}} on all your favorite categories.\n\nDon't wait. Items are selling out fast!\n\n👉 Click here: {{cta}}\n\nHappy Shopping!",
+    "ctr": 26.4,
+    "conversion": 13.2,
+    "status": "Completed",
+    "metrics": {
+      "sent": 53,
+      "opened": 45,
+      "clicked": 14,
+      "converted": 7,
+      "ctr": 26.4,
+      "conversionRate": 13.2
+    },
+    "activities": [
+      {
+        "email": "ayesha.khan@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "m.ali@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sanamalik@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "fahad.m@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sarah.q@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "salman.k@hotmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "nida.yasir@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "waseem.a@hotmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "kiran.naz@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "saba.qamar@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "jj@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "iqra.aziz@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "humayun.s@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sajal.aly@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sheheryar@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "urwa.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "farhan.s@hotmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "maya.ali@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ahsan.k@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "wahaj.ali@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "bilal.abbas@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ramsha.k@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "asim.azhar@hotmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "syra.y@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ahad.mir@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "zara.noor@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "asad.s@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "yasir.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mohib.mirza@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "amina.s@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "noman.ijaz@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": false
+      },
+      {
+        "email": "sania.saeed@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "faysal.q@yahoo.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "arij.f@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sami.khan@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mansha.p@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "jibran.n@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sonya.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sanam.s@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "babar.azam@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "saim.ayub@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "bismah.m@yahoo.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "fatima.sana@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "muneeba.a@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "nashra.s@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "anwer.a@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "boom.boom@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "kami@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "umar@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "adnan@yahoo.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "wahab.riaz@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "azhar.ali@outlook.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      },
+      {
+        "email": "asad.shafiq@gmail.com",
+        "opened": true,
+        "clicked": true,
+        "converted": true
+      }
+    ],
+    "recommendations": [
+      "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
+      "CTR is performing well. Maintain standard paragraph length and test personalizing the greeting style to build stronger user connection.",
+      "Conversion to clicks ratio is high. Consider expanding this target segment size in the next run, as the offer-market fit is highly optimized."
+    ],
+    "createdAt": "2026-06-06T12:17:36.490Z"
+  },
+  {
     "id": "camp_1780748048306",
     "name": "TESTING CAMPAIGN",
     "type": "Summer Sale",

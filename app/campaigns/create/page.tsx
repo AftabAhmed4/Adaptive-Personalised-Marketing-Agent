@@ -61,6 +61,7 @@ export default function CreateCampaignPage() {
             clearInterval(pollingRef.current!);
             setStep('done');
             setTimeout(() => {
+              sessionStorage.setItem('campaignCreated', form.campaignName);
               router.push('/dashboard');
             }, 2500);
           }
