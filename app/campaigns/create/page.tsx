@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
+import { Users, Target, Mail, Brain, Megaphone, Zap, Bot, Settings, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
 
 const CAMPAIGN_TYPES = ['11.11 Sale', 'Pakistan Day Sale', 'Summer Sale', 'Black Friday'];
 
@@ -14,10 +15,10 @@ interface EventLog {
 }
 
 const agentSteps = [
-  { key: 'AudienceAgent', label: 'Audience Agent', icon: '👥', desc: 'Analyzing user behavior & selecting target segment' },
-  { key: 'StrategyAgent', label: 'Strategy Agent', icon: '🎯', desc: 'Formulating optimal marketing strategy' },
-  { key: 'TemplateAgent', label: 'Template Agent', icon: '✉️', desc: 'Writing high-converting copy & content' },
-  { key: 'LearningAgent', label: 'Learning Agent', icon: '🧠', desc: 'Analyzing simulated metrics & generating insights' },
+  { key: 'AudienceAgent', label: 'Audience Agent', icon: <Users size={18} />, desc: 'Analyzing user behavior & selecting target segment' },
+  { key: 'StrategyAgent', label: 'Strategy Agent', icon: <Target size={18} />, desc: 'Formulating optimal marketing strategy' },
+  { key: 'TemplateAgent', label: 'Template Agent', icon: <Mail size={18} />, desc: 'Writing high-converting copy & content' },
+  { key: 'LearningAgent', label: 'Learning Agent', icon: <Brain size={18} />, desc: 'Analyzing simulated metrics & generating insights' },
 ];
 
 function getStepStatus(agentKey: string, events: EventLog[]) {
@@ -120,7 +121,7 @@ export default function CreateCampaignPage() {
               {/* Campaign Info */}
               <div className="card" style={{ padding: 28, marginBottom: 20 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 24 }}>
-                  <div style={{ width: 36, height: 36, borderRadius: 8, background: 'var(--brand-purple-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 18 }}>📣</div>
+                  <div style={{ width: 36, height: 36, borderRadius: 8, background: 'var(--brand-purple-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-purple-light)' }}><Megaphone size={18} /></div>
                   <div>
                     <div style={{ fontWeight: 700, fontSize: 16 }}>Campaign Details</div>
                     <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>Basic campaign configuration</div>
@@ -159,13 +160,13 @@ export default function CreateCampaignPage() {
 
               {/* AI vs Manual selection */}
               {[
-                { field: 'audienceSelection', label: 'Audience Selection', icon: '👥', desc: 'Who receives this campaign?' },
-                { field: 'strategySelection', label: 'Strategy Selection', icon: '🎯', desc: 'How do we reach them?' },
-                { field: 'templateSelection', label: 'Template Selection', icon: '✉️', desc: 'What do we send?' },
+                { field: 'audienceSelection', label: 'Audience Selection', icon: <Users size={16} />, desc: 'Who receives this campaign?' },
+                { field: 'strategySelection', label: 'Strategy Selection', icon: <Target size={16} />, desc: 'How do we reach them?' },
+                { field: 'templateSelection', label: 'Template Selection', icon: <Mail size={16} />, desc: 'What do we send?' },
               ].map(({ field, label, icon, desc }) => (
                 <div key={field} className="card" style={{ padding: 24, marginBottom: 16 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 16 }}>
-                    <div style={{ width: 32, height: 32, borderRadius: 8, background: 'var(--brand-purple-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 16 }}>{icon}</div>
+                    <div style={{ width: 32, height: 32, borderRadius: 8, background: 'var(--brand-purple-dim)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--brand-purple-light)' }}>{icon}</div>
                     <div>
                       <div style={{ fontWeight: 700, fontSize: 14 }}>{label}</div>
                       <div style={{ fontSize: 12, color: 'var(--text-muted)' }}>{desc}</div>
@@ -178,7 +179,7 @@ export default function CreateCampaignPage() {
                     >
                       <div className="option-card-indicator"></div>
                       <div>
-                        <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--text-primary)' }}>🤖 AI Generated</div>
+                        <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: 4 }}><Bot size={14} /> AI Generated</div>
                         <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>Agents decide automatically</div>
                       </div>
                     </div>
@@ -188,7 +189,7 @@ export default function CreateCampaignPage() {
                     >
                       <div className="option-card-indicator"></div>
                       <div>
-                        <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--text-primary)' }}>⚙️ Manual</div>
+                        <div style={{ fontWeight: 600, fontSize: 13, color: 'var(--text-primary)', display: 'flex', alignItems: 'center', gap: 4 }}><Settings size={14} /> Manual</div>
                         <div style={{ fontSize: 11, color: 'var(--text-muted)', marginTop: 2 }}>Use predefined options</div>
                       </div>
                     </div>
@@ -196,8 +197,8 @@ export default function CreateCampaignPage() {
                 </div>
               ))}
 
-              <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%', justifyContent: 'center', marginTop: 8 }}>
-                ⚡ Generate Campaign
+              <button type="submit" className="btn btn-primary btn-lg flex items-center justify-center gap-2" style={{ width: '100%', marginTop: 8 }}>
+                <Zap size={18} /> Generate Campaign
               </button>
             </form>
           </div>
@@ -211,14 +212,16 @@ export default function CreateCampaignPage() {
     <div>
       <div className="topbar">
         <div>
-          <div className="topbar-title">{step === 'done' ? '✅ Campaign Generated' : '⚡ Generating Campaign...'}</div>
+          <div className="topbar-title flex items-center gap-2">
+            {step === 'done' ? <><CheckCircle2 size={20} className="text-emerald-500" /> Campaign Generated</> : <><Zap size={20} className="text-amber-500" /> Generating Campaign...</>}
+          </div>
           <div className="topbar-subtitle">
             {step === 'done' ? 'All agents completed successfully' : 'AI agents are orchestrating your campaign'}
           </div>
         </div>
         {step === 'done' && (
           <div className="topbar-actions">
-            <button className="btn btn-primary" onClick={handleViewCampaign}>View Campaign →</button>
+            <button className="btn btn-primary flex items-center gap-2" onClick={handleViewCampaign}>View Campaign <ArrowRight size={16} /></button>
           </div>
         )}
       </div>
@@ -243,7 +246,7 @@ export default function CreateCampaignPage() {
                     </div>
                     <div>
                       {status === 'active' && <div className="spinner"></div>}
-                      {status === 'done' && <span style={{ color: 'var(--brand-emerald)', fontSize: 18 }}>✓</span>}
+                      {status === 'done' && <CheckCircle2 size={18} color="var(--brand-emerald)" />}
                       {status === 'pending' && <span style={{ color: 'var(--text-muted)', fontSize: 12 }}>Waiting</span>}
                     </div>
                   </div>
@@ -302,12 +305,12 @@ export default function CreateCampaignPage() {
 
           {isComplete && (
             <div className="ai-result fade-in-up" style={{ marginTop: 16 }}>
-              <div className="ai-result-header">✦ Orchestration Complete</div>
+              <div className="ai-result-header flex items-center gap-2"><Sparkles size={14} /> Orchestration Complete</div>
               <p style={{ color: 'var(--text-secondary)', fontSize: 13, margin: 0 }}>
                 Your campaign has been successfully generated by the AI agents. All metrics have been simulated and learning recommendations are ready.
               </p>
-              <button className="btn btn-primary" style={{ marginTop: 14 }} onClick={handleViewCampaign}>
-                View Campaign Details →
+              <button className="btn btn-primary flex items-center gap-2" style={{ marginTop: 14 }} onClick={handleViewCampaign}>
+                View Campaign Details <ArrowRight size={14} />
               </button>
             </div>
           )}

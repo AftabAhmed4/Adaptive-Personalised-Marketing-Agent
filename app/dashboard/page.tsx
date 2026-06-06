@@ -1,6 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Megaphone, Activity, TrendingUp, DollarSign, Bot, Inbox, Zap, ArrowRight } from 'lucide-react';
 import {
   LineChart, Line, BarChart, Bar, XAxis, YAxis, Tooltip,
   ResponsiveContainer, CartesianGrid, Legend
@@ -88,8 +89,8 @@ export default function DashboardPage() {
           <div className="topbar-subtitle">Welcome back — your AI agents are ready</div>
         </div>
         <div className="topbar-actions">
-          <Link href="/campaigns/create" className="btn btn-primary">
-            <span>⚡</span> New Campaign
+          <Link href="/campaigns/create" className="btn btn-primary flex items-center gap-1">
+            <Zap size={16} /> New Campaign
           </Link>
         </div>
       </div>
@@ -98,31 +99,31 @@ export default function DashboardPage() {
         {/* KPI Cards */}
         <div className="kpi-grid">
           <div className="kpi-card purple fade-in-up">
-            <div className="kpi-icon purple">📣</div>
+            <div className="kpi-icon purple"><Megaphone size={20} /></div>
             <div className="kpi-value">{loading ? '—' : totalCampaigns}</div>
             <div className="kpi-label">Total Campaigns</div>
             <div className="kpi-change up">↑ All time</div>
           </div>
           <div className="kpi-card cyan fade-in-up" style={{ animationDelay: '0.05s' }}>
-            <div className="kpi-icon cyan">🔴</div>
+            <div className="kpi-icon cyan"><Activity size={20} /></div>
             <div className="kpi-value">{loading ? '—' : activeCampaigns}</div>
             <div className="kpi-label">Active Campaigns</div>
             <div className="kpi-change up">↑ Running now</div>
           </div>
           <div className="kpi-card emerald fade-in-up" style={{ animationDelay: '0.1s' }}>
-            <div className="kpi-icon emerald">📈</div>
+            <div className="kpi-icon emerald"><TrendingUp size={20} /></div>
             <div className="kpi-value">{loading ? '—' : avgCtr}%</div>
             <div className="kpi-label">Avg. CTR</div>
             <div className="kpi-change up">↑ vs. industry 3.2%</div>
           </div>
           <div className="kpi-card amber fade-in-up" style={{ animationDelay: '0.15s' }}>
-            <div className="kpi-icon amber">💰</div>
+            <div className="kpi-icon amber"><DollarSign size={20} /></div>
             <div className="kpi-value">{loading ? '—' : avgConv}%</div>
             <div className="kpi-label">Conversion Rate</div>
             <div className="kpi-change up">↑ vs. baseline</div>
           </div>
           <div className="kpi-card pink fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <div className="kpi-icon pink">🤖</div>
+            <div className="kpi-icon pink"><Bot size={20} /></div>
             <div className="kpi-value">{loading ? '—' : totalCampaigns * 4}</div>
             <div className="kpi-label">AI Agent Runs</div>
             <div className="kpi-change up">↑ Autonomous</div>
@@ -193,7 +194,7 @@ export default function DashboardPage() {
               </div>
             ) : campaigns.length === 0 ? (
               <div className="empty-state">
-                <div className="empty-state-icon">📭</div>
+                <div className="empty-state-icon"><Inbox size={48} /></div>
                 <div className="empty-state-title">No campaigns yet</div>
                 <div className="empty-state-text">Create your first AI-powered campaign to get started.</div>
               </div>
@@ -222,7 +223,7 @@ export default function DashboardPage() {
                       <td style={{ fontWeight: 700, color: 'var(--brand-cyan)' }}>{c.conversion}%</td>
                       <td><span className={`badge ${statusColor[c.status] || 'badge-gray'}`}>● {c.status}</span></td>
                       <td>
-                        <Link href={`/campaigns/${c.id}`} className="btn btn-ghost btn-sm">View →</Link>
+                        <Link href={`/campaigns/${c.id}`} className="btn btn-ghost btn-sm flex items-center gap-1">View <ArrowRight size={14} /></Link>
                       </td>
                     </tr>
                   ))}

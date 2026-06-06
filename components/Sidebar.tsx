@@ -2,12 +2,14 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { LayoutDashboard, Megaphone, Users, Target, Mail, Zap, Sparkles } from 'lucide-react';
+
 const navItems = [
-  { href: '/dashboard', icon: '▦', label: 'Dashboard' },
-  { href: '/campaigns', icon: '📣', label: 'Campaigns' },
-  { href: '/audiences', icon: '👥', label: 'Audiences' },
-  { href: '/strategies', icon: '🎯', label: 'Strategies' },
-  { href: '/templates', icon: '✉️', label: 'Templates' },
+  { href: '/dashboard', icon: <LayoutDashboard size={18} />, label: 'Dashboard' },
+  { href: '/campaigns', icon: <Megaphone size={18} />, label: 'Campaigns' },
+  { href: '/audiences', icon: <Users size={18} />, label: 'Audiences' },
+  { href: '/strategies', icon: <Target size={18} />, label: 'Strategies' },
+  { href: '/templates', icon: <Mail size={18} />, label: 'Templates' },
 ];
 
 export default function Sidebar() {
@@ -16,7 +18,7 @@ export default function Sidebar() {
   return (
     <aside className="sidebar">
       <div className="sidebar-logo">
-        <div className="sidebar-logo-icon">✦</div>
+        <div className="sidebar-logo-icon"><Sparkles size={20} color="white" /></div>
         <div>
           <div className="sidebar-logo-text">MarketAI</div>
           <div className="sidebar-logo-sub">AI Marketing Platform</div>
@@ -33,7 +35,7 @@ export default function Sidebar() {
               href={item.href}
               className={`nav-item ${isActive ? 'active' : ''}`}
             >
-              <span style={{ fontSize: 16 }}>{item.icon}</span>
+              <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 24 }}>{item.icon}</span>
               {item.label}
             </Link>
           );
@@ -41,7 +43,7 @@ export default function Sidebar() {
 
         <div className="nav-section-label" style={{ marginTop: 16 }}>Quick Actions</div>
         <Link href="/campaigns/create" className="nav-item">
-          <span style={{ fontSize: 16 }}>⚡</span>
+          <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: 24 }}><Zap size={18} /></span>
           Create Campaign
         </Link>
       </nav>

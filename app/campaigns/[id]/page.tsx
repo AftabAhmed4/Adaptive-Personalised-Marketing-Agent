@@ -5,6 +5,7 @@ import {
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Legend
 } from 'recharts';
+import { Search, ArrowLeft, Users, Target, Mail, Radio, Brain, Bot, Activity, BarChart2 } from 'lucide-react';
 
 interface Campaign {
   id: string; name: string; type: string;
@@ -65,9 +66,9 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
       <div className="topbar"><div className="topbar-title">Not Found</div></div>
       <div className="page-content">
         <div className="empty-state">
-          <div className="empty-state-icon">🔍</div>
+          <div className="empty-state-icon"><Search size={48} /></div>
           <div className="empty-state-title">Campaign not found</div>
-          <Link href="/campaigns" className="btn btn-primary" style={{ marginTop: 16 }}>← Back to Campaigns</Link>
+          <Link href="/campaigns" className="btn btn-primary flex items-center gap-2" style={{ marginTop: 16 }}><ArrowLeft size={16} /> Back to Campaigns</Link>
         </div>
       </div>
     </div>
@@ -91,7 +92,7 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
     <div>
       <div className="topbar">
         <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
-          <Link href="/campaigns" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: 13 }}>← Campaigns</Link>
+          <Link href="/campaigns" style={{ color: 'var(--text-muted)', textDecoration: 'none', fontSize: 13, display: 'flex', alignItems: 'center', gap: 4 }}><ArrowLeft size={14} /> Campaigns</Link>
           <div style={{ width: 1, height: 20, background: 'var(--border)' }}></div>
           <div>
             <div className="topbar-title">{campaign.name}</div>
@@ -108,20 +109,20 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
         <div className="card" style={{ padding: 24, marginBottom: 20 }}>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24 }}>
             {[
-              { label: 'Audience', value: campaign.audienceName, icon: '👥' },
-              { label: 'Strategy', value: campaign.strategyName, icon: '🎯' },
-              { label: 'Template', value: campaign.templateName, icon: '✉️' },
-              { label: 'Reach', value: `${campaign.userCount.toLocaleString()} users`, icon: '📡' },
-            ].map(item => (
-              <div key={item.label} style={{ flex: '1 1 200px' }}>
-                <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>
+              { label: 'Audience', value: campaign.audienceName, icon: <Users size={16} /> },
+              { label: 'Strategy', value: campaign.strategyName, icon: <Target size={16} /> },
+              { label: 'Template', value: campaign.templateName, icon: <Mail size={16} /> },
+              { label: 'Reach', value: `${campaign.userCount.toLocaleString()} users`, icon: <Radio size={16} /> },
+            ].map((item, idx) => (
+              <div key={idx} style={{ flex: '1 1 200px' }}>
+                <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 4 }}>
                   {item.icon} {item.label}
                 </div>
                 <div style={{ fontSize: 14, fontWeight: 600, color: 'var(--text-primary)' }}>{item.value}</div>
               </div>
             ))}
             <div style={{ flex: '1 1 200px' }}>
-              <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6 }}>📧 Subject Line</div>
+              <div style={{ fontSize: 11, color: 'var(--text-muted)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 6, display: 'flex', alignItems: 'center', gap: 4 }}><Mail size={16} /> Subject Line</div>
               <div style={{ fontSize: 13, color: 'var(--text-secondary)' }}>{campaign.templateSubject}</div>
             </div>
           </div>
@@ -196,7 +197,7 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
         <div className="tabs">
           {(['overview', 'activity', 'recommendations'] as const).map(t => (
             <button key={t} className={`tab ${activeTab === t ? 'active' : ''}`} onClick={() => setActiveTab(t)}>
-              {t === 'overview' ? '📊 Overview' : t === 'activity' ? '👤 User Activity' : '🧠 Learning Insights'}
+              {t === 'overview' ? <div className="flex items-center gap-1"><BarChart2 size={14} /> Overview</div> : t === 'activity' ? <div className="flex items-center gap-1"><Users size={14} /> User Activity</div> : <div className="flex items-center gap-1"><Brain size={14} /> Learning Insights</div>}
               {t === 'recommendations' && (
                 <span style={{ marginLeft: 6, background: 'var(--brand-purple-dim)', color: 'var(--brand-purple-light)', borderRadius: 99, padding: '1px 7px', fontSize: 11 }}>
                   {campaign.recommendations.length}
@@ -265,7 +266,7 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
         {activeTab === 'recommendations' && (
           <div className="fade-in">
             <div style={{ marginBottom: 16 }}>
-              <div className="section-title">🧠 AI Learning Recommendations</div>
+              <div className="section-title flex items-center gap-2"><Brain size={18} /> AI Learning Recommendations</div>
               <div className="section-subtitle">Generated by LearningAgent based on campaign performance metrics</div>
             </div>
             {campaign.recommendations.map((rec, i) => (
@@ -276,7 +277,7 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
             ))}
             {campaign.recommendations.length === 0 && (
               <div className="empty-state">
-                <div className="empty-state-icon">🤖</div>
+                <div className="empty-state-icon"><Bot size={48} /></div>
                 <div className="empty-state-title">No recommendations yet</div>
                 <div className="empty-state-text">Learning Agent will generate insights after campaign data is available.</div>
               </div>
