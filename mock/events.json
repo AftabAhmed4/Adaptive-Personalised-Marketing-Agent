@@ -1,0 +1,234 @@
+[
+  {
+    "id": "evt_1780744474422_91poa3tbz",
+    "type": "campaign.started",
+    "campaignId": "camp_1780744474421",
+    "message": "Starting campaign generation workflow for \"Hackathon Launch Day Special\"",
+    "agentName": "OrchestratorAgent",
+    "timestamp": "2026-06-06T11:14:34.422Z"
+  },
+  {
+    "id": "evt_1780744474424_dn5rjttti",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Audience Agent Running...",
+    "agentName": "AudienceAgent",
+    "timestamp": "2026-06-06T11:14:34.424Z"
+  },
+  {
+    "id": "evt_1780744475936_7cgk6od4d",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Audience matched: \"National Holiday Active Segment\" (59 users targetable)",
+    "agentName": "AudienceAgent",
+    "timestamp": "2026-06-06T11:14:35.936Z",
+    "details": {
+      "audienceName": "National Holiday Active Segment",
+      "userCount": 59
+    }
+  },
+  {
+    "id": "evt_1780744475937_8v414yve5",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Strategy Agent Running...",
+    "agentName": "StrategyAgent",
+    "timestamp": "2026-06-06T11:14:35.937Z"
+  },
+  {
+    "id": "evt_1780744477449_h3mdczqjd",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Strategy formulated: \"Flash Sale\" (Multi-Channel)",
+    "agentName": "StrategyAgent",
+    "timestamp": "2026-06-06T11:14:37.449Z",
+    "details": {
+      "strategyName": "Flash Sale",
+      "channel": "Multi-Channel",
+      "reasoning": "Tech-savvy and younger cohorts respond highly to urgency cues, countdowns, and limited-run Flash Sales over social channels."
+    }
+  },
+  {
+    "id": "evt_1780744477452_6q8oru7an",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Template Agent Running...",
+    "agentName": "TemplateAgent",
+    "timestamp": "2026-06-06T11:14:37.452Z"
+  },
+  {
+    "id": "evt_1780744478963_d3v2jlt9a",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Template copywriting generated: \"Pakistan Day Resolution Sale\"",
+    "agentName": "TemplateAgent",
+    "timestamp": "2026-06-06T11:14:38.963Z",
+    "details": {
+      "templateName": "Pakistan Day Resolution Sale",
+      "subject": "🇵🇰 Celebrate Pakistan Day with {{discount}} OFF!"
+    }
+  },
+  {
+    "id": "evt_1780744478965_bqxx1w9rb",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Simulating campaign launch and collecting customer activities...",
+    "agentName": "System",
+    "timestamp": "2026-06-06T11:14:38.965Z"
+  },
+  {
+    "id": "evt_1780744480179_swlyfw90p",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Learning Agent Running...",
+    "agentName": "LearningAgent",
+    "timestamp": "2026-06-06T11:14:40.179Z"
+  },
+  {
+    "id": "evt_1780744481687_m40vz2t5a",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744474421",
+    "message": "Learning Recommendations generated.",
+    "agentName": "LearningAgent",
+    "timestamp": "2026-06-06T11:14:41.687Z",
+    "details": {
+      "recommendations": [
+        "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
+        "CTR is performing well. Maintain standard paragraph length and test personalizing the greeting style to build stronger user connection.",
+        "Conversion to clicks ratio is high. Consider expanding this target segment size in the next run, as the offer-market fit is highly optimized."
+      ]
+    }
+  },
+  {
+    "id": "evt_1780744481761_or7kolbrv",
+    "type": "campaign.created",
+    "campaignId": "camp_1780744474421",
+    "message": "Campaign \"Hackathon Launch Day Special\" created.",
+    "agentName": "System",
+    "timestamp": "2026-06-06T11:14:41.761Z"
+  },
+  {
+    "id": "evt_1780744481762_tceysh54v",
+    "type": "campaign.completed",
+    "campaignId": "camp_1780744474421",
+    "message": "Orchestration workflow completed successfully.",
+    "agentName": "OrchestratorAgent",
+    "timestamp": "2026-06-06T11:14:41.762Z"
+  },
+  {
+    "id": "evt_1780744671381_fzwjqoucf",
+    "type": "campaign.started",
+    "campaignId": "camp_1780744671373",
+    "message": "Starting campaign generation workflow for \"API Test Campaign Run\"",
+    "agentName": "OrchestratorAgent",
+    "timestamp": "2026-06-06T11:17:51.381Z"
+  },
+  {
+    "id": "evt_1780744671383_d8pkw3o9o",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Audience Agent Running...",
+    "agentName": "AudienceAgent",
+    "timestamp": "2026-06-06T11:17:51.383Z"
+  },
+  {
+    "id": "evt_1780744678868_o8m5u2z6u",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Audience matched: \"National Holiday Active Segment\" (59 users targetable)",
+    "agentName": "AudienceAgent",
+    "timestamp": "2026-06-06T11:17:58.868Z",
+    "details": {
+      "audienceName": "National Holiday Active Segment",
+      "userCount": 59
+    }
+  },
+  {
+    "id": "evt_1780744678869_d7e3ekq5n",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Strategy Agent Running...",
+    "agentName": "StrategyAgent",
+    "timestamp": "2026-06-06T11:17:58.869Z"
+  },
+  {
+    "id": "evt_1780744696598_orstbyalm",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Strategy formulated: \"Flash Sale\" (Multi-Channel)",
+    "agentName": "StrategyAgent",
+    "timestamp": "2026-06-06T11:18:16.598Z",
+    "details": {
+      "strategyName": "Flash Sale",
+      "channel": "Multi-Channel",
+      "reasoning": "Tech-savvy and younger cohorts respond highly to urgency cues, countdowns, and limited-run Flash Sales over social channels."
+    }
+  },
+  {
+    "id": "evt_1780744696601_2zf4etvms",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Template Agent Running...",
+    "agentName": "TemplateAgent",
+    "timestamp": "2026-06-06T11:18:16.602Z"
+  },
+  {
+    "id": "evt_1780744700237_w9rs561xj",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Template copywriting generated: \"Pakistan Day Resolution Sale\"",
+    "agentName": "TemplateAgent",
+    "timestamp": "2026-06-06T11:18:20.237Z",
+    "details": {
+      "templateName": "Pakistan Day Resolution Sale",
+      "subject": "🇵🇰 Celebrate Pakistan Day with {{discount}} OFF!"
+    }
+  },
+  {
+    "id": "evt_1780744700238_rbyakdor9",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Simulating campaign launch and collecting customer activities...",
+    "agentName": "System",
+    "timestamp": "2026-06-06T11:18:20.239Z"
+  },
+  {
+    "id": "evt_1780744701445_pgvbj1sxz",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Learning Agent Running...",
+    "agentName": "LearningAgent",
+    "timestamp": "2026-06-06T11:18:21.445Z"
+  },
+  {
+    "id": "evt_1780744705998_zrzwjylp0",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780744671373",
+    "message": "Learning Recommendations generated.",
+    "agentName": "LearningAgent",
+    "timestamp": "2026-06-06T11:18:25.998Z",
+    "details": {
+      "recommendations": [
+        "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
+        "CTR is performing well. Maintain standard paragraph length and test personalizing the greeting style to build stronger user connection.",
+        "Conversion to clicks ratio is high. Consider expanding this target segment size in the next run, as the offer-market fit is highly optimized."
+      ]
+    }
+  },
+  {
+    "id": "evt_1780744706002_d8pkz11oi",
+    "type": "campaign.created",
+    "campaignId": "camp_1780744671373",
+    "message": "Campaign \"API Test Campaign Run\" created.",
+    "agentName": "System",
+    "timestamp": "2026-06-06T11:18:26.002Z"
+  },
+  {
+    "id": "evt_1780744706002_445cat9is",
+    "type": "campaign.completed",
+    "campaignId": "camp_1780744671373",
+    "message": "Orchestration workflow completed successfully.",
+    "agentName": "OrchestratorAgent",
+    "timestamp": "2026-06-06T11:18:26.003Z"
+  }
+]

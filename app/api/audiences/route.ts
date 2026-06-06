@@ -1,0 +1,27 @@
+import { NextResponse } from 'next/server';
+import { mockAudiences } from '@/mock/audiences';
+import { execute as runAudienceAgent } from '@/adk/agents/AudienceAgent';
+
+export async function GET() {
+  try {
+    return NextResponse.json(mockAudiences);
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}
+
+export async function POST(req: Request) {
+  try {
+    const body = await req.json();
+    const { campaignType } = body;
+    
+    if (!campaignType) {
+      return NextResponse.json({ error: "Missing campaignType" }, { status: 400 });
+    }
+    
+    const audience = await runAudienceAgent(campaignType);
+    return NextResponse.json(audience);
+  } catch (error: any) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}
