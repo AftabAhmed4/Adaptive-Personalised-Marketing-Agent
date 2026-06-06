@@ -1,5 +1,335 @@
 [
   {
+    "id": "camp_1780748048306",
+    "name": "TESTING CAMPAIGN",
+    "type": "Summer Sale",
+    "audienceName": "Urban Female Summer Apparel Segment",
+    "audienceFilter": {
+      "ageMin": 18,
+      "ageMax": 35,
+      "gender": "Female",
+      "cities": [
+        "Karachi",
+        "Islamabad"
+      ]
+    },
+    "userCount": 21,
+    "strategyName": "Bundle & Save",
+    "templateName": "Summer Vibes Discount",
+    "templateSubject": "☀️ Beat the Heat: {{offer}} inside!",
+    "templateBody": "Hey {{name}},\n\nCool down this season with our refreshing Summer Sale! Enjoy {{discount}} across our store.\n\nMake your summer brighter with our hottest deals!\n\n👉 Shop Summer Collection: {{cta}}\n\nStay cool!",
+    "ctr": 14.3,
+    "conversion": 4.8,
+    "status": "Completed",
+    "metrics": {
+      "sent": 21,
+      "opened": 14,
+      "clicked": 3,
+      "converted": 1,
+      "ctr": 14.3,
+      "conversionRate": 4.8
+    },
+    "activities": [
+      {
+        "email": "ayesha.khan@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "zainab.ahmed@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "hina.riaz@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sarah.q@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "nida.yasir@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sadia.imam@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "iqra.aziz@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mawra.h@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "urwa.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "yumna.z@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "kubra.k@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ramsha.k@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "hania.amir@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "syra.y@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "iqra.y@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sanem.b@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "arij.f@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mansha.p@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sonya.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "fatima.sana@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "muneeba.a@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      }
+    ],
+    "recommendations": [
+      "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
+      "CTR is performing well. Maintain standard paragraph length and test personalizing the greeting style to build stronger user connection.",
+      "Conversion to clicks ratio is high. Consider expanding this target segment size in the next run, as the offer-market fit is highly optimized."
+    ],
+    "createdAt": "2026-06-06T12:14:25.681Z"
+  },
+  {
+    "id": "camp_1780747401418",
+    "name": "TEST CAMPAIGN",
+    "type": "Summer Sale",
+    "audienceName": "Urban Female Summer Apparel Segment",
+    "audienceFilter": {
+      "ageMin": 18,
+      "ageMax": 35,
+      "gender": "Female",
+      "cities": [
+        "Karachi",
+        "Islamabad"
+      ]
+    },
+    "userCount": 21,
+    "strategyName": "Bundle & Save",
+    "templateName": "Summer Vibes Discount",
+    "templateSubject": "☀️ Beat the Heat: {{offer}} inside!",
+    "templateBody": "Hey {{name}},\n\nCool down this season with our refreshing Summer Sale! Enjoy {{discount}} across our store.\n\nMake your summer brighter with our hottest deals!\n\n👉 Shop Summer Collection: {{cta}}\n\nStay cool!",
+    "ctr": 14.3,
+    "conversion": 4.8,
+    "status": "Completed",
+    "metrics": {
+      "sent": 21,
+      "opened": 14,
+      "clicked": 3,
+      "converted": 1,
+      "ctr": 14.3,
+      "conversionRate": 4.8
+    },
+    "activities": [
+      {
+        "email": "ayesha.khan@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "zainab.ahmed@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "hina.riaz@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sarah.q@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "nida.yasir@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sadia.imam@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "iqra.aziz@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mawra.h@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "urwa.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "yumna.z@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "kubra.k@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "ramsha.k@yahoo.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "hania.amir@gmail.com",
+        "opened": false,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "syra.y@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "iqra.y@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sanem.b@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "arij.f@outlook.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "mansha.p@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "sonya.h@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "fatima.sana@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      },
+      {
+        "email": "muneeba.a@gmail.com",
+        "opened": true,
+        "clicked": false,
+        "converted": false
+      }
+    ],
+    "recommendations": [
+      "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
+      "CTR is performing well. Maintain standard paragraph length and test personalizing the greeting style to build stronger user connection.",
+      "Conversion to clicks ratio is high. Consider expanding this target segment size in the next run, as the offer-market fit is highly optimized."
+    ],
+    "createdAt": "2026-06-06T12:03:55.617Z"
+  },
+  {
     "id": "camp_1780746694913",
     "name": "MARCH",
     "type": "Pakistan Day Sale",

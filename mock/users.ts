@@ -8,12 +8,14 @@ export interface User {
   purchases: number;
   lastActive: string;
   totalSpent: number;
+  browsingHistory?: string[];
+  pastInteractions?: string[];
 }
 
 export const mockUsers: User[] = [
-  { id: "usr_1", name: "Ayesha Khan", email: "ayesha.khan@gmail.com", city: "Karachi", age: 24, gender: "Female", purchases: 12, lastActive: "2026-06-05", totalSpent: 24500 },
-  { id: "usr_2", name: "Muhammad Ali", email: "m.ali@yahoo.com", city: "Lahore", age: 31, gender: "Male", purchases: 5, lastActive: "2026-06-01", totalSpent: 8900 },
-  { id: "usr_3", name: "Zainab Ahmed", email: "zainab.ahmed@outlook.com", city: "Islamabad", age: 28, gender: "Female", purchases: 18, lastActive: "2026-06-06", totalSpent: 42000 },
+  { id: "usr_1", name: "Ayesha Khan", email: "ayesha.khan@gmail.com", city: "Karachi", age: 24, gender: "Female", purchases: 12, lastActive: "2026-06-05", totalSpent: 24500, browsingHistory: ["Viewed Summer Lawn Suits", "Abandoned Cart: Floral Kurti"], pastInteractions: ["Frequent Buyer", "Clicked '50% Off' email last week"] },
+  { id: "usr_2", name: "Muhammad Ali", email: "m.ali@yahoo.com", city: "Lahore", age: 31, gender: "Male", purchases: 5, lastActive: "2026-06-01", totalSpent: 8900, browsingHistory: ["Viewed Men's Wallets", "Searched for Leather Jackets"], pastInteractions: ["Has not opened last 3 emails", "Loves free shipping"] },
+  { id: "usr_3", name: "Zainab Ahmed", email: "zainab.ahmed@outlook.com", city: "Islamabad", age: 28, gender: "Female", purchases: 18, lastActive: "2026-06-06", totalSpent: 42000, browsingHistory: ["Browsed Designer Handbags", "Viewed Pearl Jewelry"], pastInteractions: ["VIP Customer", "Always clicks on New Arrivals"] },
   { id: "usr_4", name: "Hamza Siddiqui", email: "hamzas@gmail.com", city: "Karachi", age: 35, gender: "Male", purchases: 3, lastActive: "2026-05-28", totalSpent: 4500 },
   { id: "usr_5", name: "Fatima Syed", email: "fatima.syed@gmail.com", city: "Rawalpindi", age: 22, gender: "Female", purchases: 7, lastActive: "2026-06-04", totalSpent: 11200 },
   { id: "usr_6", name: "Bilal Butt", email: "bilal.butt@hotmail.com", city: "Faisalabad", age: 40, gender: "Male", purchases: 22, lastActive: "2026-06-03", totalSpent: 67800 },

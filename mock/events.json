@@ -1,91 +1,96 @@
 [
   {
-    "id": "evt_1780746694916_bkatjm8zb",
+    "id": "evt_1780748048480_b4hkro87k",
     "type": "campaign.started",
-    "campaignId": "camp_1780746694913",
-    "message": "Starting campaign generation workflow for \"MARCH\"",
+    "campaignId": "camp_1780748048306",
+    "message": "Starting campaign generation workflow for \"TESTING CAMPAIGN\"",
     "agentName": "OrchestratorAgent",
-    "timestamp": "2026-06-06T11:51:34.916Z"
+    "timestamp": "2026-06-06T12:14:08.480Z"
   },
   {
-    "id": "evt_1780746694917_crxlyx1d7",
+    "id": "evt_1780748048484_d4a6hedzf",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
+    "campaignId": "camp_1780748048306",
     "message": "Audience Agent Running...",
     "agentName": "AudienceAgent",
-    "timestamp": "2026-06-06T11:51:34.917Z"
+    "timestamp": "2026-06-06T12:14:08.484Z"
   },
   {
-    "id": "evt_1780746696795_4i0tu8mik",
+    "id": "evt_1780748050826_xudh1ou7r",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
-    "message": "Audience matched: \"National Holiday Active Segment\" (59 users targetable)",
+    "campaignId": "camp_1780748048306",
+    "message": "Audience matched: \"Urban Female Summer Apparel Segment\" (21 users targetable)",
     "agentName": "AudienceAgent",
-    "timestamp": "2026-06-06T11:51:36.795Z",
+    "timestamp": "2026-06-06T12:14:10.826Z",
     "details": {
-      "audienceName": "National Holiday Active Segment",
-      "userCount": 59
+      "audienceName": "Urban Female Summer Apparel Segment",
+      "userCount": 21
     }
   },
   {
-    "id": "evt_1780746696796_11ocz52vx",
+    "id": "evt_1780748050828_8ay3bpdxw",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
+    "campaignId": "camp_1780748048306",
     "message": "Strategy Agent Running...",
     "agentName": "StrategyAgent",
-    "timestamp": "2026-06-06T11:51:36.796Z"
+    "timestamp": "2026-06-06T12:14:10.828Z"
   },
   {
-    "id": "evt_1780746696797_wixoc8cio",
+    "id": "evt_1780748053126_kfowsggdw",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
-    "message": "Strategy \"Manual\" not found, using generic promotion",
+    "campaignId": "camp_1780748048306",
+    "message": "Strategy formulated: \"Bundle & Save\" (Multi-Channel)",
     "agentName": "StrategyAgent",
-    "timestamp": "2026-06-06T11:51:36.797Z"
-  },
-  {
-    "id": "evt_1780746696797_9cahhrd3h",
-    "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
-    "message": "Template Agent Running...",
-    "agentName": "TemplateAgent",
-    "timestamp": "2026-06-06T11:51:36.797Z"
-  },
-  {
-    "id": "evt_1780746698726_oquins19w",
-    "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
-    "message": "Template copywriting generated: \"Pakistan Day Resolution Sale\"",
-    "agentName": "TemplateAgent",
-    "timestamp": "2026-06-06T11:51:38.726Z",
+    "timestamp": "2026-06-06T12:14:13.126Z",
     "details": {
-      "templateName": "Pakistan Day Resolution Sale",
-      "subject": "🇵🇰 Celebrate Pakistan Day with {{discount}} OFF!"
+      "strategyName": "Bundle & Save",
+      "channel": "Multi-Channel",
+      "reasoning": "Summer seasonal launches convert well when visual catalogs are paired with Bundle & Save discounts to raise average order values."
     }
   },
   {
-    "id": "evt_1780746698726_2tzoi7zf4",
+    "id": "evt_1780748053130_jzls2rzte",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
+    "campaignId": "camp_1780748048306",
+    "message": "Template Agent Running...",
+    "agentName": "TemplateAgent",
+    "timestamp": "2026-06-06T12:14:13.130Z"
+  },
+  {
+    "id": "evt_1780748056329_ua2v8oroz",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780748048306",
+    "message": "Template copywriting generated: \"Summer Vibes Discount\"",
+    "agentName": "TemplateAgent",
+    "timestamp": "2026-06-06T12:14:16.329Z",
+    "details": {
+      "templateName": "Summer Vibes Discount",
+      "subject": "☀️ Beat the Heat: {{offer}} inside!"
+    }
+  },
+  {
+    "id": "evt_1780748056332_n2ifb29zd",
+    "type": "campaign.updated",
+    "campaignId": "camp_1780748048306",
     "message": "Simulating campaign launch and collecting customer activities...",
     "agentName": "System",
-    "timestamp": "2026-06-06T11:51:38.726Z"
+    "timestamp": "2026-06-06T12:14:16.332Z"
   },
   {
-    "id": "evt_1780746699941_9slw7s80l",
+    "id": "evt_1780748057555_aa0sbet0x",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
+    "campaignId": "camp_1780748048306",
     "message": "Learning Agent Running...",
     "agentName": "LearningAgent",
-    "timestamp": "2026-06-06T11:51:39.941Z"
+    "timestamp": "2026-06-06T12:14:17.555Z"
   },
   {
-    "id": "evt_1780746701312_ayhycr0r6",
+    "id": "evt_1780748065680_bxsn4mz0d",
     "type": "campaign.updated",
-    "campaignId": "camp_1780746694913",
+    "campaignId": "camp_1780748048306",
     "message": "Learning Recommendations generated.",
     "agentName": "LearningAgent",
-    "timestamp": "2026-06-06T11:51:41.312Z",
+    "timestamp": "2026-06-06T12:14:25.680Z",
     "details": {
       "recommendations": [
         "Open rates are strong (above 30%). Subject line format is effective. A/B test minor emoji variations to squeeze out more performance.",
@@ -95,19 +100,19 @@
     }
   },
   {
-    "id": "evt_1780746701315_srwjldnk1",
+    "id": "evt_1780748065688_scerh8so2",
     "type": "campaign.created",
-    "campaignId": "camp_1780746694913",
-    "message": "Campaign \"MARCH\" created.",
+    "campaignId": "camp_1780748048306",
+    "message": "Campaign \"TESTING CAMPAIGN\" created.",
     "agentName": "System",
-    "timestamp": "2026-06-06T11:51:41.315Z"
+    "timestamp": "2026-06-06T12:14:25.688Z"
   },
   {
-    "id": "evt_1780746701317_md1e261w3",
+    "id": "evt_1780748065690_wl7it47ro",
     "type": "campaign.completed",
-    "campaignId": "camp_1780746694913",
+    "campaignId": "camp_1780748048306",
     "message": "Orchestration workflow completed successfully.",
     "agentName": "OrchestratorAgent",
-    "timestamp": "2026-06-06T11:51:41.317Z"
+    "timestamp": "2026-06-06T12:14:25.690Z"
   }
 ]

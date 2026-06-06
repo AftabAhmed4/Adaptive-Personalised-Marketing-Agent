@@ -5,7 +5,7 @@ import {
   PieChart, Pie, Cell, Tooltip, ResponsiveContainer, BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Legend
 } from 'recharts';
-import { Search, ArrowLeft, Users, Target, Mail, Radio, Brain, Bot, Activity, BarChart2, Send, CheckCircle2 } from 'lucide-react';
+import { Search, ArrowLeft, Users, Target, Mail, Radio, Brain, Bot, Activity, BarChart2, Send, CheckCircle2, X, AlertCircle } from 'lucide-react';
 
 interface Campaign {
   id: string; name: string; type: string;
@@ -42,15 +42,31 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
   const [activeTab, setActiveTab] = useState<'overview' | 'activity' | 'recommendations'>('overview');
   const [showTemplate, setShowTemplate] = useState(false);
   const [isSending, setIsSending] = useState(false);
-  const [toastVisible, setToastVisible] = useState(false);
+  const [emailModal, setEmailModal] = useState<{ open: boolean; success: boolean; sentTo?: string; personalizedFor?: string; body?: string; error?: string }>({ open: false, success: false });
 
-  const handleSendEmails = () => {
+  const handleSendEmails = async () => {
     setIsSending(true);
-    setTimeout(() => {
+    try {
+      const res = await fetch(`/api/campaigns/${id}/send`, { method: 'POST' });
+      const data = await res.json();
+      
+      if (!res.ok) {
+        setEmailModal({ open: true, success: false, error: data.error || 'Failed to send email. Please check server logs.' });
+        return;
+      }
+      
+      setEmailModal({
+        open: true,
+        success: true,
+        sentTo: data.sentTo,
+        personalizedFor: data.personalizedFor,
+        body: data.personalizedBody,
+      });
+    } catch (err: any) {
+      setEmailModal({ open: true, success: false, error: err.message });
+    } finally {
       setIsSending(false);
-      setToastVisible(true);
-      setTimeout(() => setToastVisible(false), 4000);
-    }, 1500);
+    }
   };
 
   useEffect(() => {
@@ -305,31 +321,112 @@ export default function CampaignDetailPage({ params }: { params: Promise<{ id: s
         )}
       </div>
 
-      {/* Toast Notification */}
-      {toastVisible && (
-        <div className="fade-in-up" style={{
-          position: 'fixed',
-          bottom: 24,
-          right: 24,
-          background: 'var(--bg-card)',
-          border: '1px solid var(--border)',
-          borderRadius: 8,
-          padding: '16px 20px',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 12,
-          boxShadow: '0 8px 30px rgba(0,0,0,0.4)',
-          zIndex: 1000
-        }}>
-          <CheckCircle2 size={24} color="var(--brand-emerald)" />
-          <div>
-            <div style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)' }}>Emails Sent Successfully</div>
-            <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 2 }}>
-              Dispatched {campaign.metrics.sent.toLocaleString()} emails to the "{campaign.audienceName}" segment.
-            </div>
+      {/* Email Result Modal */}
+      {emailModal.open && (
+        <div
+          className="fade-in"
+          onClick={() => setEmailModal({ open: false, success: false })}
+          style={{
+            position: 'fixed', inset: 0,
+            background: 'rgba(0,0,0,0.65)',
+            backdropFilter: 'blur(4px)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            zIndex: 2000, padding: 24
+          }}
+        >
+          <div
+            className="fade-in-up"
+            onClick={e => e.stopPropagation()}
+            style={{
+              background: 'var(--bg-card)',
+              border: '1px solid var(--border)',
+              borderRadius: 16,
+              padding: 32,
+              maxWidth: 560,
+              width: '100%',
+              boxShadow: '0 24px 60px rgba(0,0,0,0.5)',
+              position: 'relative'
+            }}
+          >
+            <button
+              onClick={() => setEmailModal({ open: false, success: false })}
+              style={{ position: 'absolute', top: 16, right: 16, background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-muted)', padding: 4 }}
+            >
+              <X size={20} />
+            </button>
+
+            {emailModal.success ? (
+              <>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 12, background: 'rgba(16,185,129,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <CheckCircle2 size={26} color="var(--brand-emerald)" />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--text-primary)' }}>Email Sent Successfully!</div>
+                    <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 2 }}>
+                      Personalized by AI for <strong style={{ color: 'var(--text-secondary)' }}>{emailModal.personalizedFor}</strong>
+                    </div>
+                  </div>
+                </div>
+
+                <div style={{ background: 'var(--bg-primary)', borderRadius: 8, padding: '10px 14px', marginBottom: 16, fontSize: 13, color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <Mail size={14} />
+                  Delivered to: <strong style={{ color: 'var(--brand-cyan)', marginLeft: 4 }}>{emailModal.sentTo}</strong>
+                </div>
+
+                <div style={{ fontSize: 12, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: 8 }}>
+                  AI-Personalized Email Preview
+                </div>
+                <div style={{
+                  background: 'var(--bg-primary)',
+                  border: '1px solid var(--border)',
+                  borderRadius: 8,
+                  padding: 16,
+                  fontSize: 13,
+                  color: 'var(--text-secondary)',
+                  lineHeight: 1.7,
+                  maxHeight: 260,
+                  overflowY: 'auto',
+                  whiteSpace: 'pre-wrap'
+                }}>
+                  {emailModal.body}
+                </div>
+
+                <button
+                  className="btn btn-primary"
+                  style={{ width: '100%', marginTop: 20 }}
+                  onClick={() => setEmailModal({ open: false, success: false })}
+                >
+                  Done
+                </button>
+              </>
+            ) : (
+              <>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 20 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 12, background: 'rgba(239,68,68,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <AlertCircle size={26} color="#ef4444" />
+                  </div>
+                  <div>
+                    <div style={{ fontWeight: 800, fontSize: 18, color: 'var(--text-primary)' }}>Email Failed to Send</div>
+                    <div style={{ fontSize: 13, color: 'var(--text-muted)', marginTop: 2 }}>Check your SMTP credentials or server logs</div>
+                  </div>
+                </div>
+                <div style={{ background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.25)', borderRadius: 8, padding: 14, fontSize: 13, color: '#f87171', fontFamily: 'monospace', wordBreak: 'break-all' }}>
+                  {emailModal.error}
+                </div>
+                <button
+                  className="btn btn-ghost"
+                  style={{ width: '100%', marginTop: 20 }}
+                  onClick={() => setEmailModal({ open: false, success: false })}
+                >
+                  Close
+                </button>
+              </>
+            )}
           </div>
         </div>
       )}
     </div>
   );
 }
+

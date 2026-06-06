@@ -16,10 +16,11 @@ export interface OrchestratorInput {
   audienceSelection: 'AI Generated' | string; // "AI Generated" or manual segment ID
   strategySelection: 'AI Generated' | string; // "AI Generated" or manual strategy ID
   templateSelection: 'AI Generated' | string; // "AI Generated" or manual template ID
+  campaignId?: string;
 }
 
 export async function execute(input: OrchestratorInput): Promise<Campaign> {
-  const campaignId = `camp_${Date.now()}`;
+  const campaignId = input.campaignId || `camp_${Date.now()}`;
   console.log(`[OrchestratorAgent] Starting orchestration for campaign: "${input.campaignName}" (${campaignId})...`);
 
   // 1. Emit campaign.started event

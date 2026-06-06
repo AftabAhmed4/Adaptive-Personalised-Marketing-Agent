@@ -60,6 +60,9 @@ export default function CreateCampaignPage() {
           if (data.some((e: EventLog) => e.type === 'campaign.completed')) {
             clearInterval(pollingRef.current!);
             setStep('done');
+            setTimeout(() => {
+              router.push('/dashboard');
+            }, 2500);
           }
         }
       } catch {}
@@ -82,18 +85,16 @@ export default function CreateCampaignPage() {
     // Clear old events first
     await fetch('/api/campaigns/events', { method: 'DELETE' });
 
-    const res = await fetch('/api/campaigns', {
+    const newCampId = `camp_${Date.now()}`;
+    setCampaignId(newCampId);
+    setStep('running');
+
+    // Run the fetch in the background without blocking the UI
+    fetch('/api/campaigns', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(form),
-    });
-
-    if (res.ok) {
-      // The campaign ID will appear in events; use timestamp-based ID matching
-      const ts = Date.now();
-      setCampaignId(`camp_${ts}`);
-      setStep('running');
-    }
+      body: JSON.stringify({ ...form, campaignId: newCampId }),
+    }).catch(err => console.error(err));
   };
 
   const handleViewCampaign = () => {

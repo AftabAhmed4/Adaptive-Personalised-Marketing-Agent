@@ -14,7 +14,7 @@ export async function GET() {
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { campaignName, campaignType, audienceSelection, strategySelection, templateSelection } = body;
+    const { campaignId, campaignName, campaignType, audienceSelection, strategySelection, templateSelection } = body;
     
     if (!campaignName || !campaignType || !audienceSelection || !strategySelection || !templateSelection) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -23,6 +23,7 @@ export async function POST(req: Request) {
     // Trigger sequential agent execution asynchronously in the background.
     // The Event Bus will receive progress logs which the frontend polls.
     runOrchestrator({
+      campaignId,
       campaignName,
       campaignType,
       audienceSelection,
