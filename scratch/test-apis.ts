@@ -13,7 +13,7 @@ async function testAPIs() {
     } else {
       console.log(`Failed with status: ${res.status}`);
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error("GET /api/campaigns request failed:", err.message);
   }
 
@@ -27,7 +27,7 @@ async function testAPIs() {
     } else {
       console.log(`Failed with status: ${res.status}`);
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error("GET /api/audiences request failed:", err.message);
   }
 
@@ -51,11 +51,11 @@ async function testAPIs() {
     if (res.ok) {
       const data = await res.json() as any;
       console.log("Success! Server Response:", JSON.stringify(data));
-      
+
       // Let's check events
       console.log("\nWaiting 2 seconds to check events in Event Bus...");
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       const evtRes = await fetch(`${baseUrl}/api/campaigns/events`);
       if (evtRes.ok) {
         const events = await evtRes.json() as any[];
@@ -69,7 +69,7 @@ async function testAPIs() {
     } else {
       console.log(`Failed with status: ${res.status}`);
     }
-  } catch (err) {
+  } catch (err: any) {
     console.error("POST /api/campaigns request failed:", err.message);
   }
 }

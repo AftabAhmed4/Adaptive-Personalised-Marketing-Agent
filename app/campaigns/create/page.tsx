@@ -8,6 +8,7 @@ const CAMPAIGN_TYPES = ['11.11 Sale', 'Pakistan Day Sale', 'Summer Sale', 'Black
 interface EventLog {
   id: string;
   type: string;
+  campaignId: string;
   message: string;
   agentName?: string;
   timestamp: string;
